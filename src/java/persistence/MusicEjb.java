@@ -5,6 +5,7 @@
  */
 package persistence;
 
+import entities.Sheetmusic;
 import entities.User;
 import exception.MusicException;
 import javax.ejb.Stateless;
@@ -51,6 +52,16 @@ public class MusicEjb {
       }
       
       
-      
+      public void insertSheetmusic(Sheetmusic sheetmusic) throws MusicException{
+          
+            EntityManager em = emf.createEntityManager();
+            Sheetmusic s1 = em.find(Sheetmusic.class, sheetmusic.getTitle());
+            
+            if(s1 != null){          
+                throw new MusicException("EL usuario ya existe");      
+            }         
+            em.persist(sheetmusic);
+            em.close(); 
+      }
     
 }
