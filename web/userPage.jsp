@@ -13,5 +13,40 @@
     </head>
     <body>
         <h1>User Page</h1>
+        <form method="POST" action="registrarPartitura.jsp">
+
+            <input type="submit" value="Registrar Partitura">
+
+        </form>
+        
+        
+        <form method="POST" action="modifyPartitura.jsp">
+            <input type="submit" value="Modificar Partitura">
+        </form>
+        
+        <form method="POST" action="deletePartitura.jsp">
+            <input type="submit" value="Borrar Partitura">
+        </form>
+        
+        <form method="POST" action="listadoPartituras.jsp">
+            <input type="submit" value="Listado Partituras">
+        </form>
+        
+        <form method="POST" action="partiturasUsuario.jsp">
+            <input type="submit" value="Partituras de Usuario">
+        </form>
+        
+        <form method="POST" action="partiturasdeInstrumento.jsp">
+            <input type="submit" value="Partituras por Instrumento favorito">
+        </form>
+        
+        <form method="POST" action="rankingUsuarios.jsp">
+            <input type="submit" value="Ranking de Usuarios">
+        </form>
+
+
+
+
+
     </body>
 </html>
