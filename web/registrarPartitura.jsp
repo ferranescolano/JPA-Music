@@ -29,7 +29,7 @@
             <h3>Genre</h3>
             <input type="text" name="genre">
             <h3>Difficulty</h3>
-            <input type="text" name="diffulty"><br><br>
+            <input type="text" name="difficulty"><br><br>
             <input type="submit" name="registerSheet" value="Register">
         
         </form> 

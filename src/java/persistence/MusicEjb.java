@@ -8,6 +8,7 @@ package persistence;
 import entities.Sheetmusic;
 import entities.User;
 import exception.MusicException;
+import java.util.ArrayList;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -17,10 +18,13 @@ import javax.persistence.PersistenceUnit;
  *
  * @author alu2014044
  */
+
 @Stateless
 public class MusicEjb {
 
     @PersistenceUnit EntityManagerFactory emf;
+    public static final String STATUS_ERROR = "ERROR";
+    
     
       public void insertUser(User u) throws MusicException{
         EntityManager em = emf.createEntityManager();
@@ -54,14 +58,22 @@ public class MusicEjb {
       
       public void insertSheetmusic(Sheetmusic sheetmusic) throws MusicException{
           
-            EntityManager em = emf.createEntityManager();
-            Sheetmusic s1 = em.find(Sheetmusic.class, sheetmusic.getTitle());
+           EntityManager em = emf.createEntityManager();
+          /*  Sheetmusic s1 = em.find(Sheetmusic.clasas());
             
-            if(s1 != null){          
+            if(s1 != null){   
+
                 throw new MusicException("La Partitura ya existe");      
-            }         
+            }  */
             em.persist(sheetmusic);
             em.close(); 
+      }
+      
+      public ArrayList listadoPartituras(){
+          
+          return (ArrayList) emf.createEntityManager().createNamedQuery("Sheetmusic.findAll").getResultList();
+          
+          
       }
     
 }

@@ -45,7 +45,12 @@
         </form>
 
 
+ <%
+            String status = (String) request.getAttribute("status");
+            if (status != null) {
+        %> <%= status%>
 
+        <% }%>
 
 
     </body>

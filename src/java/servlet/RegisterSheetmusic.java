@@ -6,6 +6,7 @@
 package servlet;
 
 import entities.Sheetmusic;
+import entities.User;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -24,7 +25,8 @@ public class RegisterSheetmusic extends HttpServlet {
 
        @EJB 
     MusicEjb ejb;
-     
+      public static final String STATUS_OK = "Partitura Registrada";
+     public static final String STATUS_ERROR = "ERROR";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -43,20 +45,19 @@ public class RegisterSheetmusic extends HttpServlet {
         String genre = request.getParameter("genre");
         String difficulty = request.getParameter("difficulty");
 
-        
+        User owner =(User) request.getSession(true).getAttribute("usuario");
         Sheetmusic sheetmusic = new Sheetmusic(null, title, artist, instrument, genre, difficulty, true);
-        
+        sheetmusic.setOwner(owner);
         
         try {
             
             ejb.insertSheetmusic(sheetmusic);
-            request.setAttribute("status", "ok");
-            
+             request.setAttribute("status", STATUS_OK);
         } catch (Exception e) {
-            request.setAttribute("status", e.getMessage());
+            request.setAttribute("status", STATUS_ERROR);
         }
         
-         request.getRequestDispatcher("/final.jsp").forward(request, response);
+         request.getRequestDispatcher("/userPage.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
