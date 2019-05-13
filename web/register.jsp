@@ -27,7 +27,13 @@
   <option value="bateria">Bateria</option>
         </select><br>
         
-  <p><input type="submit" value="new" name="register"></p> 
+  <p><input type="submit" value="Register" name="register"></p>
+
+  
+  
+  </form>
+        <form method="POST" action="login.jsp">
+      <input type="submit" value="Login">
   </form>
     </body>
 </html>

@@ -4,9 +4,73 @@
         <servlet-name>RegisterUser</servlet-name>
         <servlet-class>servlet.RegisterUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginUser</servlet-name>
+        <servlet-class>servlet.LoginUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterSheetmusic</servlet-name>
+        <servlet-class>servlet.RegisterSheetmusic</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>modificarPartitura</servlet-name>
+        <servlet-class>servlet.modificarPartitura</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>borrarPartitura</servlet-name>
+        <servlet-class>servlet.borrarPartitura</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>listPartituras</servlet-name>
+        <servlet-class>servlet.listPartituras</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userSheetmusic</servlet-name>
+        <servlet-class>servlet.userSheetmusic</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>partiturasporInstrumento</servlet-name>
+        <servlet-class>servlet.partiturasporInstrumento</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>rankingUser</servlet-name>
+        <servlet-class>servlet.rankingUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterUser</servlet-name>
         <url-pattern>/RegisterUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginUser</servlet-name>
+        <url-pattern>/LoginUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterSheetmusic</servlet-name>
+        <url-pattern>/RegisterSheetmusic</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modificarPartitura</servlet-name>
+        <url-pattern>/modificarPartitura</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>borrarPartitura</servlet-name>
+        <url-pattern>/borrarPartitura</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listPartituras</servlet-name>
+        <url-pattern>/listPartituras</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userSheetmusic</servlet-name>
+        <url-pattern>/userSheetmusic</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>partiturasporInstrumento</servlet-name>
+        <url-pattern>/partiturasporInstrumento</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>rankingUser</servlet-name>
+        <url-pattern>/rankingUser</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

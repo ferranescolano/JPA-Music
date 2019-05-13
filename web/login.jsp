@@ -12,13 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form>
+                <form action="LoginUser" method="POST">
             <h3>User name</h3>
             <input type="text" name="usuario" value="username" placeholder="Insert your username"><br>
             <h3>Password</h3>
             <input type="password" name="pass" value="password" placeholder="Insert your password"><br><br>
 
-            <p><input type="submit" value="new" name="register"></p> 
+          <p><input type="submit" value="Login" name="login"></p> 
         </form>
     </body>
 </html>
