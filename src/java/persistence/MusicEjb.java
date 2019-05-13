@@ -58,7 +58,7 @@ public class MusicEjb {
             Sheetmusic s1 = em.find(Sheetmusic.class, sheetmusic.getTitle());
             
             if(s1 != null){          
-                throw new MusicException("EL usuario ya existe");      
+                throw new MusicException("La Partitura ya existe");      
             }         
             em.persist(sheetmusic);
             em.close(); 
